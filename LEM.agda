@@ -32,7 +32,7 @@ lem {P = P} ¬[P∨¬P] = ¬[P∨¬P] (inr ¬P)
 
 -- Heyting if restricted to Prop
 lem-bicartesian-closed : ∀ {ℓ} {P : Type ℓ} → ¬ (¬ (P ⊎ (¬ P)))
-lem-bicartesian-closed {ℓ} {P} = eval ∘ ⟨ λ' (eval ∘ (id ×ₕ inr)) , λ' (eval ∘ (id ×ₕ inl)) ⟩
+lem-bicartesian-closed = eval ∘ ⟨ λ' (eval ∘ (id ×ₕ inr)) , λ' (eval ∘ (id ×ₕ inl)) ⟩
   where
     id : ∀ {ℓ} {A : Type ℓ} → A → A
     id x = x
